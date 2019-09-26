@@ -1,0 +1,3 @@
+1. kubectl describe pods podname 
+2. kubectl logs podname
+3. kubectl exec podname -- command

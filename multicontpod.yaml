@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: multipod     
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+  - name: redis
+    image: redis
+  - name: memcashed
+    image: memcached
+  - name: consul
+    image: consul
+  restartPolicy: Never  

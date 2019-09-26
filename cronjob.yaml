@@ -1,0 +1,19 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata: 
+  name: testcron
+spec:
+  schedule: "*/1 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          activeDeadlineSeconds: 10
+          containers:
+          - name: testc
+            image: busybox
+            args:
+            - /bin/bash
+            - -c
+            - uname  
+          restartPolicy: OnFailure   
